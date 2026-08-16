@@ -5,6 +5,7 @@ const reveals = document.querySelectorAll('.reveal');
 menuIcon.onclick = () => {
     navLinks.classList.toggle('active');
     menuIcon.classList.toggle('active'); // animate icon
+    document.querySelector('header').classList.toggle('menu-open');
 }
 
 // Reveal elements on scroll

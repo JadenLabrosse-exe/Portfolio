@@ -1,4 +1,4 @@
-/*Global Styles*/
+/*------------Global Styles------------*/
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
     list-style: none;
 }
-/*Header Styles*/
+/*------------Header Styles------------*/
 header{
     position: fixed;
     top: 1rem;
@@ -25,7 +25,7 @@ header{
     border-radius: 3rem;
     z-index: 1000;
 }
-/*Logo (Name) and Navigation Styles*/
+/*------------Logo and Navigation Styles------------*/
 .logo{
     color: white;
     font-size: 1.3rem;
@@ -45,7 +45,7 @@ li a{
     color: white;
     font-weight: 300;
 }
-/* Gradient underline animation */
+/*------------Gradient underline animation------------*/
 li a::before{
     position: absolute;
     content: '';
@@ -78,13 +78,27 @@ li a:hover::before{
     transition: 0.3s ease-in-out;
     background: linear-gradient(to right, #2774ae, #002E5D, #002E5D);
 }
+.download-link {
+    padding: 12px 28px;
+    display: inline-block;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    text-wrap: nowrap;
+    border-radius: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
 
-/* Hamburger Icon Styles */
+/*------------Hamburger Icon Styles------------*/
 #menu-icon{
     font-size: 2rem;
     display: none;
 }
 
+/*------------Section Styles------------*/
 section{
     min-height: 100vh;
     padding: 8rem 12%;
@@ -107,7 +121,7 @@ section{
     width: 30vw;
     border-radius: 50%;
 }
-/* Gradient text */
+/*------------Gradient text------------*/
 .info-box{
     display: flex;
     flex-direction: column;
@@ -257,9 +271,11 @@ section{
     color: white;
     transform: translateY(-10px)scale(1.02);
 }
-.project-card img{
+.project-card img {
     width: 20vw;
-    border-radius: 1rem;
+    height: 10vw;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 .project-card:hover .btn{
     border: 2px solid white;
@@ -302,6 +318,54 @@ section{
     left: 10px;
     transform: translate(50%,-50%);
     font-size: 4rem;
+}
+
+/*------------Contact Styles------------*/
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info {
+    max-width: 800px;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin: 0.5rem 0;
+}
+
+.contact-details {
+    margin-top: 2rem;
+}
+
+.contact-details p {
+    margin: 1rem 0;
+}
+
+.contact-details a {
+    color: #2774ae;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+    color: #002E5D;
 }
 
 footer{
@@ -385,30 +449,51 @@ footer ul li a{
     }
 }
 
+/*------------Mobile Styles------------*/
 @media(max-width:600px){
-    header #menu-icon{
+    header{
+        padding: 1rem 2rem;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+    header.menu-open{
+        justify-content: center;
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+    #menu-icon{
         display: block;
+        margin-left: auto;
+        cursor: pointer;
+    }
+    #menu-icon.active{
+        color: black;
     }
     .nav-links{
         position: absolute;
         top: 100%;
         margin-top: 1rem;
-        width: 100%;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 1rem;
         color: white;
         display: flex;
+        flex: 1;
         flex-direction: column;
         text-align: center;
         background: rgba(0, 0, 0, 0.8);
         border-radius: 3rem;
         display: none;
+        justify-content: center;
+        gap: 2rem;
     }
     .nav-links li{
         margin-top: 1.5rem;
         padding: 1rem;
     }
     .nav-links.active{
-        display: block;
+        display: flex;
     }
     header{
         padding: 1rem 5rem;
