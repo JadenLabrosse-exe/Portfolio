@@ -421,6 +421,7 @@ footer ul li a{
     header{
         gap: 1rem;
         padding: 1rem 1.1rem;
+        justify-content: space-between;
     }
     header .logo{
         font-size: 1rem;
@@ -456,6 +457,7 @@ footer ul li a{
         gap: 6rem;
         justify-content: space-between;
         position: relative;
+        width: 90%;
     }
     #menu-icon{
         display: block;
