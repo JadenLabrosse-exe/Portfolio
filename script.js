@@ -7,7 +7,7 @@ let lastScrollTop = 0;
 
 menuIcon.onclick = () => {
     navLinks.classList.toggle('active');
-    menuIcon.classList.toggle('active'); // animate icon
+    menuIcon.classList.toggle('active'); // Animate icon
     document.querySelector('header').classList.toggle('menu-open');
 }
 
@@ -21,6 +21,10 @@ window.addEventListener('scroll', () => {
         header.classList.add('hide');
     } else {
         header.classList.remove('hide');
+
+        // Close the menu when scrolling
+        navLinks.classList.remove('active');
+        menuIcon.classList.remove('active');
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
