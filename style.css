@@ -61,6 +61,7 @@ li a:hover::before{
     width: 100%;
 }
 
+/*------------Visit Github Button Style------------*/
 .visit-btn{
     padding: 0.8rem 1.5rem;
     border-radius: 3rem;
@@ -452,13 +453,9 @@ footer ul li a{
 @media(max-width:600px){
     header{
         padding: 1rem 2rem;
-        gap: 1rem;
+        gap: 6rem;
         justify-content: space-between;
-    }
-    header.menu-open{
-        justify-content: center;
-        padding: 1rem 2rem;
-        gap: 1rem;
+        position: relative;
     }
     #menu-icon{
         display: block;
@@ -473,12 +470,11 @@ footer ul li a{
         top: 100%;
         margin-top: 1rem;
         width: auto;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 1rem;
+        left: auto;
+        transform: none;
         padding: 1rem;
         color: white;
-        display: flex;
-        flex: 1;
         flex-direction: column;
         text-align: center;
         background: rgba(0, 0, 0, 0.8);
@@ -494,14 +490,9 @@ footer ul li a{
     .nav-links.active{
         display: flex;
     }
-    header{
-        padding: 1rem 5rem;
-        gap: 8rem;
-    }
     header .logo{
         font-size: 1.5rem;
     }
-
     .about-container img{
         width: 80vw;
     }
