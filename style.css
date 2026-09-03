@@ -271,6 +271,9 @@ section{
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
 }
+.btn-group{
+    margin-top: auto;
+}
 .project-card:hover{
     background-color: black;
     color: white;
@@ -283,9 +286,14 @@ section{
     border: 2px solid black;
     border-radius: 10px;
 }
+.project-card p {
+    font-size: 1rem;
+    text-align: center;
+}
 .project-card:hover .btn{
     border: 2px solid white;
     color: white;
+    align-items: flex-end;
 }
 .project-card:hover .btn:hover{
     border: 2px solid white;
