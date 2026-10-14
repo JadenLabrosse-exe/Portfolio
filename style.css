@@ -25,6 +25,19 @@ header{
     border-radius: 3rem;
     z-index: 1000;
 }
+.about{
+    isolation: isolate;
+}
+.about::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(39, 116, 174, 0.35) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    z-index: -1;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
 /*------------Logo and Navigation Styles------------*/
 .logo{
     color: white;
